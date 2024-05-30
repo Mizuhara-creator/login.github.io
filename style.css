@@ -8,6 +8,8 @@ body {
     background-size: cover;
     width: 400px;
     height: 600px;
+    margin: 0;
+    padding: 20px;
 }
 
 .wrapper {
@@ -24,10 +26,6 @@ body {
     background: transparent;
     backdrop-filter: blur(6px);
     box-shadow: 5px 5px 10px 0 rgba(255, 255, 255, 0.5);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
 }
 
 .wrapper h2 {
@@ -114,33 +112,107 @@ a.sign-up {
     color: #fff;
 }
 
-/* Media queries untuk resolusi layar yang lebih kecil */
-@media only screen and (max-width: 600px) {
-    body {
-        width: auto; 
-        height: auto; 
-        background-position: center calc(50% + 80px); 
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    .wrapper {
+        width: 80%;
+        height: auto;
     }
 
-    .wrapper {
-        width: 90%; 
-        height: auto; 
+    .input-field input[type="email"],
+    .input-field input[type="password"] {
+        width: 90%;
+    }
+
+    .wrapper h2 {
+        font-size: 26px;
+    }
+
+    .wrapper .login {
+        width: 180px;
     }
 }
 
-@media only screen and (max-width: 600px) {
-    body {
-        background-position: center calc(50% + 40px); /* Sesuaikan dengan kebutuhan */
+@media (max-width: 992px) {
+    .wrapper {
+        width: 90%;
     }
 
-    .wrapper {
-        width: 90%; 
+    .input-field input[type="email"],
+    .input-field input[type="password"] {
+        width: 85%;
+    }
+
+    .wrapper h2 {
+        font-size: 24px;
+    }
+
+    .wrapper .login {
+        width: 160px;
     }
 }
 
-/* Media queries untuk resolusi layar yang lebih kecil lagi, misalnya perangkat seluler */
-@media only screen and (max-width: 400px) {
+@media (max-width: 768px) {
     .wrapper {
-        width: 95%; /* Menggunakan persentase */
+        width: 95%;
+    }
+
+    .input-field input[type="email"],
+    .input-field input[type="password"] {
+        width: 80%;
+    }
+
+    .wrapper h2 {
+        font-size: 22px;
+    }
+
+    .wrapper .login {
+        width: 140px;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .wrapper {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .input-field input[type="email"],
+    .input-field input[type="password"] {
+        width: 75%;
+    }
+
+    .wrapper h2 {
+        font-size: 20px;
+    }
+
+    .wrapper .login {
+        width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapper {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .input-field input[type="email"],
+    .input-field input[type="password"] {
+        width: 70%;
+    }
+
+    .wrapper h2 {
+        font-size: 18px;
+    }
+
+    .wrapper .login {
+        width: 100px;
     }
 }
