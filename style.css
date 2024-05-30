@@ -128,6 +128,19 @@ a.sign-up {
     }
 }
 
+@media only screen and (max-width: 600px) {
+    body {
+        background-position: center calc(50% + 40px); /* Sesuaikan dengan kebutuhan */
+    }
+
+    .wrapper {
+        width: 90%; 
+    }
+}
+
 /* Media queries untuk resolusi layar yang lebih kecil lagi, misalnya perangkat seluler */
 @media only screen and (max-width: 400px) {
+    .wrapper {
+        width: 95%; /* Menggunakan persentase */
+    }
 }
