@@ -1,0 +1,133 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url(background.png);
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    height: 600px;
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 350px;
+    text-align: center;
+    border: 1px solid rgb(241, 241, 241);
+    border-radius:  12px;
+    padding: 10px 20px;
+    background: transparent;
+    backdrop-filter: blur(6px);
+    box-shadow: 5px 5px 10px 0 rgba(255, 255, 255, 0.5);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.wrapper h2 {
+    font-size: 30px;
+    color: #fffefe;
+}
+
+.input-field {
+    position: relative;
+}
+
+.input-field input[type="email"],
+.input-field input[type="password"] {
+    border-radius: 10px;
+    background: transparent;
+    margin: 15px;
+    border: 2px solid rgb(255, 255, 255);
+    width: 280px;
+    height: 2px;
+    padding: 20px 40px 20px 20px;
+    backdrop-filter: blur(15px);
+    color: #fff;
+}
+
+.input-field input[type="email"]:valid {
+    color: #fff; 
+}
+
+.input-field i {
+    position: absolute;
+    top: 50px;
+    transform: translateY(-50%);
+    right: 10px;
+    color: rgb(252, 252, 252);
+}
+
+input::placeholder {
+    color: rgb(255, 255, 255);
+}
+
+.input-field input[type="email"]:focus::placeholder,
+.input-field input[type="password"]:focus::placeholder {
+    visibility: hidden;
+    transform: translateY(-100%);
+    font-size: 14px;
+}
+
+.input-field input[type="email"]:not(:focus)::placeholder,
+.input-field input[type="password"]:not(:focus)::placeholder {
+    visibility: visible;
+    transform: translateY(0%);
+    font-size: 16px;
+    transition: transform 0.2s ease-in-out, font-size 0.2s ease-in-out;
+}
+
+a.forgot {
+    text-decoration: none;
+    position: relative;
+    color: rgb(255, 255, 255, 0.712);
+}
+
+a.forgot:hover {
+    text-decoration: underline;
+    color: #fffffffd;
+}
+
+a.sign-up {
+    text-decoration: none;
+    color: #fffffffd;
+}
+
+.wrapper .login {
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 45px;
+    width: 200px;
+    height: 30px;
+}
+
+.login-text {
+    color: #fff;
+}
+
+/* Media queries untuk resolusi layar yang lebih kecil */
+@media only screen and (max-width: 600px) {
+    body {
+        width: auto; 
+        height: auto; 
+        background-position: center calc(50% + 80px); 
+    }
+
+    .wrapper {
+        width: 90%; 
+        height: auto; 
+    }
+}
+
+/* Media queries untuk resolusi layar yang lebih kecil lagi, misalnya perangkat seluler */
+@media only screen and (max-width: 400px) {
+}
